@@ -9,7 +9,7 @@ function App() {
     <div>
       <PageContainer>
         <Router>
-          {/* Navbar is here because we want to show it on every page */}
+          {/* Navbar is here because we still want to show it even if page changes */}
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
