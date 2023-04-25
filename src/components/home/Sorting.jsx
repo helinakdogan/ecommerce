@@ -2,7 +2,13 @@ import React from 'react'
 
 const Sorting = () => {
   return (
-    <div>Sorting</div>
+    <div className='bg-gray-100 my-5 p-5 flex items-center justify-end'>
+        <select name='bg-gray-30 p-3 px-5' id=''>
+            <option disabled value="">Select an option</option>
+            <option value="inc">Increasing</option>
+            <option value="dec">Decreasing</option>
+        </select>
+    </div>
   )
 }
 
