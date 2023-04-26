@@ -1,6 +1,8 @@
 import React from 'react'
 import Slider from 'react-slick'
 
+// Here we used Slider for slider component. It shows popular sneakers as slide show.
+
 const SliderComp = () => {
 
     const settings = {
