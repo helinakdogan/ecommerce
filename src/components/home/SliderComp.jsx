@@ -19,10 +19,10 @@ const SliderComp = () => {
         <div>
             <Slider {...settings}>
 
-                {/* First product */}
+                {/* First product, Slider has its own css so that we use important (!) */}
                 <div className='!flex items-center bg-gray-100 px-6'>
-                    <div className=''>
-                        <div className='text-6xl font-bold'>Nike Sneakers</div>
+                    <div>
+                        <div className='text-6xl font-bold'>Trendy Sneakers</div>
                         <div className='text-lg my-4'>With its easygoing lines, heritage track look and of course, visible Nike Air cushioning, the Air Max SC SE is the perfect finish to any outfit. The rich mixture of materials adds depth while making it a durable and lightweight shoe for everyday wear.</div>
                         <div className='border rounded-full cursor-pointer text-2xl w-[200px] h-16 flex items-center justify-center bg-gray-200'>Go Details</div>
                     </div>
@@ -32,7 +32,7 @@ const SliderComp = () => {
                 {/* Second product */}
                 <div className='!flex items-center bg-gray-100 px-6'>
                     <div>
-                        <div className='text-6xl font-bold'>Nike Sneakers</div>
+                        <div className='text-6xl font-bold'>Trendy Sneakers</div>
                         <div className='text-lg my-4'>Put a little spark in your step. These thoughtfully crafted kicks pair luxe comfort with extra stability—without sacrificing style. The dual foam midsole, pillowy collar and plush tongue keep you cushioned while a sleek design and textured pull tab bring energy to any 'fit.</div>
                         <div className='border rounded-full cursor-pointer text-2xl w-[200px] h-16 flex items-center justify-center bg-gray-200'>Go Details</div>
                     </div>
