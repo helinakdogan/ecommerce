@@ -1,5 +1,7 @@
 import React from 'react'
 
+// 1. select menu for sorting products
+
 const Sorting = () => {
   return (
     <div className='bg-gray-100 my-5 p-5 flex items-center justify-end'>
