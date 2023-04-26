@@ -3,6 +3,10 @@ import { BiSearch } from 'react-icons/bi'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { SlBasket } from 'react-icons/sl'
 
+// 1. search box
+// 2. products user likes
+// 3. basket
+
 const NavbarRight = () => {
     return (
         <div className='flex items-center gap-8' >
