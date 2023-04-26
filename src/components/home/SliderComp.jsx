@@ -1,10 +1,11 @@
 import React from 'react'
 import Slider from 'react-slick'
 
-// Here we used Slider for slider component. It shows popular sneakers as slide show.
+// Here we use Slider for slider component. It shows popular sneakers as slide show.
 
 const SliderComp = () => {
 
+    // This settings is for slider
     const settings = {
         dots: true,
         infinite: true,
@@ -18,6 +19,7 @@ const SliderComp = () => {
         <div>
             <Slider {...settings}>
 
+                {/* First product */}
                 <div className='!flex items-center bg-gray-100 px-6'>
                     <div className=''>
                         <div className='text-6xl font-bold'>Nike Sneakers</div>
@@ -27,6 +29,7 @@ const SliderComp = () => {
                     <img src='https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ba390be5-76c3-44bd-9635-b56feb8b126c/air-max-sc-se-womens-shoes-CwMCK7.png' alt='' width='400px' height='400px' />
                 </div>
 
+                {/* Second product */}
                 <div className='!flex items-center bg-gray-100 px-6'>
                     <div>
                         <div className='text-6xl font-bold'>Nike Sneakers</div>
