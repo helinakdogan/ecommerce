@@ -9,6 +9,8 @@ import { store } from './redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+  //App is inside of Provider because we want to use redux for all pages, so that props store
   <Provider store={store}>
     <App />
   </Provider>
