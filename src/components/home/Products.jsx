@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../../redux/productSlice';
+import Loading from '../Loading';
+
 
 const Products = () => {
 
@@ -9,13 +11,25 @@ const Products = () => {
   const {products, productsStatus} = useSelector(state => state.products);
 
   console.log(products, "products");
-  
+
   useEffect (() => {
       dispatch(getProducts())
   }, [dispatch])
 
   return (
-    <div>Products</div>
+    <div>
+      {
+        productsStatus == "LOADING" ? <Loading/> :
+        <div>
+          {
+            products?.map((product, i) => {
+              
+            })
+          }
+        </div>
+
+      }
+    </div>
   )
 }
 
