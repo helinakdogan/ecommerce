@@ -1,6 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-// As an initial state, we don't have any information about categories so it is empty array
+// 1. We want to get categories information
+
+
+// 1. As an initial state, we don't have any information about categories so it is empty array
 const initialState = {
     categories: []
 }
@@ -14,13 +17,11 @@ export const getCategories = createAsyncThunk('category', async () => {
 
 const categorySlice = createSlice({
     name: "categories",
-    initialState,
-    
-    
-    // We can't use reducers because we have to use asyncthunk func for api
+    initialState,   
+    // 1. We can't use reducers because we have to use asyncthunk func for api
     reducers: {},
 
-    // Instead, we use this.
+    // 1. Instead, we use this.
     extraReducers: (builder) => {
         builder
             .addCase(getCategories.fulfilled, (state, action) => {
