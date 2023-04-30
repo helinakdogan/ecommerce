@@ -16,6 +16,7 @@ const categorySlice = createSlice({
     name: "categories",
     initialState,
     
+    
     // We can't use reducers because we have to use asyncthunk func for api
     reducers: {},
 
