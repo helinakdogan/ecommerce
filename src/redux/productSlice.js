@@ -1,6 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { STATUS } from "../utils/status";
 
+// This is for getting products by using api
+
 const initialState = {
     products: [],
     productsStatus: STATUS.IDLE,
@@ -34,12 +36,10 @@ const productSlice = createSlice({
             .addCase(getProducts.pending, (state, action) => {
                 state.productsStatus = STATUS.LOADING;
             })
-
             .addCase(getProducts.fulfilled, (state, action) => {
                 state.productsStatus = STATUS.SUCCESS;
                 state.products = action.payload;
             })
-
             .addCase(getProducts.rejected, (state, action) => {
                 state.productsStatus = STATUS.FAIL;
             })
@@ -48,12 +48,10 @@ const productSlice = createSlice({
             .addCase(getDetailProduct.pending, (state, action) => {
                 state.productDetailStatus = STATUS.LOADING;
             })
-
             .addCase(getDetailProduct.fulfilled, (state, action) => {
                 state.productDetailStatus = STATUS.SUCCESS;
                 state.products = action.payload;
             })
-
             .addCase(getDetailProduct.rejected, (state, action) => {
                 state.productDetailStatus = STATUS.FAIL;
             })
