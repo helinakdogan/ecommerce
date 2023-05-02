@@ -21,7 +21,7 @@ const Products = () => {
     <div>
       {
         productsStatus == "LOADING" ? <Loading/> :
-        <div>
+        <div className='flex flex-wrap'>
           {
             products?.map((product, i) => (
               <Product key={i} product={product}/>
