@@ -14,7 +14,7 @@ const Home = () => {
         <SliderComp/>
         <Sorting/>
         <div className='flex'>
-            <Category/>
+            <Category setCategory = {setCategory}/>
             <Products/>
         </div>
     </div>
