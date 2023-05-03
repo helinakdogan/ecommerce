@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom'
+import { getDetailProduct } from '../redux/productSlice';
 
 const Detail = () => {
-  return (
-    <div>Detail</div>
-  )
+
+    const { id } = useParams();
+    const dispatch = useDispatch();
+    const { productDetail, productDetailStatus } = useSelector(state => state.products)
+
+    useEffect(() => {
+        dispatch(getDetailProduct(id));
+    }, [dispatch, id])
+
+    console.log(productDetail, "productDetail");
+    
+    return (
+        <div>Detail</div>
+    )
 }
 
 export default Detail
