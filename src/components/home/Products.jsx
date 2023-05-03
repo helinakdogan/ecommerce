@@ -58,7 +58,7 @@ const Products = ({category, sort}) => {
           <>
             <div className='flex flex-wrap'>
               {
-                currentItems?.map((product, i) => (
+                currentItems?.sort((a,b) => sort == "inc" ? a.price - b.price : sort == "dec" ? b.price - a.price : null)?.map((product, i) => (
                   <Product key={i} product={product} />
                 ))
               }
