@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getProducts } from '../../redux/productSlice';
+import { getProducts, getCategoryProducts } from '../../redux/productSlice';
 import Loading from '../Loading';
 import Product from './Product';
 import ReactPaginate from 'react-paginate';
 
 
-const Products = () => {
+const Products = ({category}) => {
 
   const dispatch = useDispatch();
   // These two come from productSlice.js
@@ -42,8 +42,14 @@ const Products = () => {
 
 
   useEffect(() => {
-    dispatch(getProducts())
-  }, [dispatch])
+
+    if (category) {
+      dispatch(getCategoryProducts(category));
+    }else{
+      dispatch(getProducts());
+    }
+
+  }, [dispatch, category])
 
   return (
     <div>

@@ -4,7 +4,7 @@ import { getCategories } from '../../redux/categorySlice';
 
 // It will get categories by api and store.js is needed with redux
 
-const Category = () => {
+const Category = ({setCategory}) => {
 
   const dispatch = useDispatch();
   const { categories } = useSelector(state => state.categories);
@@ -21,7 +21,7 @@ const Category = () => {
       <div className='border-b pb-1 px-2 text-xl font-bold'>CATEGORY</div>
       {
         categories?.map((category, i) => (
-          <div className='text-lg m1-1 cursor-pointer hover:bg-gray-200 p-2' key={i}>{category}</div>
+          <div onClick={() => setCategory(category)} className='text-lg m1-1 cursor-pointer hover:bg-gray-200 p-2' key={i}>{category}</div>
         ))
       }
     </div>

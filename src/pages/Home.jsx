@@ -15,11 +15,11 @@ const Home = () => {
         <Sorting/>
         <div className='flex'>
             <Category setCategory = {setCategory}/>
-            <Products/>
+            <Products category={category}/>
         </div>
     </div>
   )
-  
+
 }
 
 export default Home
