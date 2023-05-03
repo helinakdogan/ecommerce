@@ -6,16 +6,16 @@ import Products from '../components/home/Products'
 
 const Home = () => {
 
-  const [sort, setStore] = useState("");
+  const [sort, setSort] = useState("");
   const [category, setCategory] = useState("");
   
   return (
     <div>
         <SliderComp/>
-        <Sorting/>
+        <Sorting setSort = {setSort}/>
         <div className='flex'>
             <Category setCategory = {setCategory}/>
-            <Products category={category}/>
+            <Products category={category} sort={sort}/>
         </div>
     </div>
   )

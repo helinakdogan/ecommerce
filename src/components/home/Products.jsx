@@ -6,14 +6,14 @@ import Product from './Product';
 import ReactPaginate from 'react-paginate';
 
 
-const Products = ({category}) => {
+const Products = ({category, sort}) => {
 
   const dispatch = useDispatch();
   // These two come from productSlice.js
   const { products, productsStatus } = useSelector(state => state.products);
 
-  console.log(products, "products");
-
+  //console.log(products, "products");
+  console.log(sort, "sort");
 
   // -------------------------- This is for pagination -------------------------------------
 
